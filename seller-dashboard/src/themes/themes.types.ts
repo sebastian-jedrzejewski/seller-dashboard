@@ -4,6 +4,7 @@ export interface pallete {
   primary300: string;
   secondary100: string;
   secondary200: string;
+  accent: string;
   red: string;
   yellow: string;
   text: string;

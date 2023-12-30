@@ -22,7 +22,6 @@ const MainPage = () => {
       <h1>Welcome {userId}</h1>
       <button onClick={handleSignOut}>Sign out</button>
       <button onClick={handleOpinions}>Opinions</button>
-
     </div>
   );
 };
