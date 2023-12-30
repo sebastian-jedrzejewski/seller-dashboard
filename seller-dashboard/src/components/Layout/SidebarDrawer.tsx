@@ -15,8 +15,11 @@ import CommentIcon from "@mui/icons-material/Comment";
 import LogoutIcon from "@mui/icons-material/Logout";
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { ThemeContext } from "../../store/ThemeContext";
+import { logout } from "../../store/redux/auth-slice";
 
 const drawerWidth = 240;
 
@@ -27,7 +30,14 @@ type Props = {
 
 const SidebarDrawer: React.FC<Props> = (props) => {
   const { colors } = useContext(ThemeContext);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { t } = useTranslation();
+
+  const handleSignOut = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
 
   const menuItems = [
     { icon: <HomeIcon />, text: t("home"), isActive: true },
@@ -72,7 +82,7 @@ const SidebarDrawer: React.FC<Props> = (props) => {
         </List>
         <List sx={{ color: colors.text }}>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={handleSignOut}>
               <ListItemIcon>
                 <LogoutIcon sx={{ color: colors.accent }} />
               </ListItemIcon>
