@@ -5,6 +5,8 @@ export interface pallete {
   secondary100: string;
   secondary200: string;
   accent: string;
+  tableHeaders: string;
+  selects: string;
   red: string;
   yellow: string;
   text: string;
