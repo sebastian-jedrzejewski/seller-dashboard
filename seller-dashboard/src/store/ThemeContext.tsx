@@ -4,7 +4,11 @@ import { ThemeContextType } from "./ThemeContext.types";
 import { Theme } from "../themes/themes.types";
 import { darkTheme, lightTheme } from "../themes/themes";
 
-export const ThemeContext = createContext<ThemeContextType | null>(null);
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: Theme.DARK,
+  colors: darkTheme,
+  toggleTheme: () => "",
+});
 
 export const ThemeContextProvider: React.FC<PropsWithChildren> = (props) => {
   const [theme, setTheme] = useState(Theme.DARK);
