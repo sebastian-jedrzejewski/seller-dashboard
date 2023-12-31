@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
 import { login } from "../store/redux/auth-slice";
+import data from "../data/data";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -9,7 +11,7 @@ const LoginPage = () => {
   const [userId, setUserId] = useState("");
 
   const handleLogin = () => {
-    if (userId === "user1" || userId === "user2") {
+    if (Object.keys(data).includes(userId)) {
       dispatch(login(userId));
       navigate("/");
     } else {

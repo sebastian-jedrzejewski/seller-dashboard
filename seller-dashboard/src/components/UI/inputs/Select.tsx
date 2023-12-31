@@ -8,6 +8,7 @@ import classes from "./inputs.module.css";
 type Props = {
   options: { label: string; value: string }[];
   defaultValue: string;
+  onSelect?: (value: string) => void;
 };
 
 const Select: React.FC<Props> = (props) => {
@@ -16,6 +17,9 @@ const Select: React.FC<Props> = (props) => {
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value as string);
+    if (props.onSelect) {
+      props.onSelect(event.target.value);
+    }
   };
 
   return (
