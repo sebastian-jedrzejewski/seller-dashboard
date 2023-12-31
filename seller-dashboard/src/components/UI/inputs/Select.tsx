@@ -9,6 +9,7 @@ type Props = {
   options: { label: string; value: string }[];
   defaultValue: string;
   onSelect?: (value: string) => void;
+  minWidth?: number;
 };
 
 const Select: React.FC<Props> = (props) => {
@@ -23,11 +24,11 @@ const Select: React.FC<Props> = (props) => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: props.minWidth || 120 }}>
       <FormControl
         sx={{
           m: 1,
-          minWidth: 120,
+          minWidth: props.minWidth || 120,
           bgcolor: colors.selects,
           "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
             {

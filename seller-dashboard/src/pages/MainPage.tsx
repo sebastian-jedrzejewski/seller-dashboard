@@ -3,6 +3,7 @@ import { RootState } from "../store/redux/store";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../store/redux/auth-slice";
 import RankingWidget from "../components/widgets/RankingWidget";
+import ChartWidget from "../components/widgets/ChartWidget";
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const MainPage = () => {
       <button onClick={handleSignOut}>Sign out</button>
       <button onClick={handleOpinions}>Opinions</button>
       <RankingWidget />
+      <ChartWidget />
     </div>
   );
 };

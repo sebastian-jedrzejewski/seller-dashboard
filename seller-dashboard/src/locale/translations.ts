@@ -18,6 +18,9 @@ const translations = {
       image: "image",
       viewsAmount: "Number of views",
       offersName: "offer's name",
+      salesChart: "Sales chart",
+      bar: "Bar",
+      pie: "Pie",
     },
   },
   [POLISH.code]: {
@@ -37,6 +40,9 @@ const translations = {
       image: "obrazek",
       viewsAmount: "Liczba wyświetleń",
       offersName: "nazwa oferty",
+      salesChart: "Wykres sprzedaży",
+      bar: "Słupkowy",
+      pie: "Liniowy",
     },
   },
 };
