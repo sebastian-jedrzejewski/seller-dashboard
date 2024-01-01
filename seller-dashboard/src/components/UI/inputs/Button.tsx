@@ -16,9 +16,9 @@ const Button: React.FC<PropsWithChildren<Props>> = (props) => {
     <MUIButton
       variant="contained"
       sx={{
-        backgroundColor: colors.secondary200,
+        backgroundColor: colors.secondary100,
         "&:hover": {
-          backgroundColor: colors.secondary100,
+          backgroundColor: colors.secondary200,
         },
         ...props.sx,
       }}

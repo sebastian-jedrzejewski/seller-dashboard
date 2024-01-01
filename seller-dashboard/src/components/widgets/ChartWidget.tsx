@@ -1,13 +1,25 @@
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 import Card from "../UI/Card";
-import Button from "../UI/inputs/Button";
 import Checkbox from "../UI/inputs/Checkbox";
 import Select from "../UI/inputs/Select";
+import Chart, {
+  ChartOptions,
+  ChartType,
+  DataPresented,
+  PeriodPresented,
+} from "../UI/Chart";
+import ButtonToggleGroup from "../UI/inputs/ButtonToggleGroup";
 
 const ChartWidget = () => {
   const { t } = useTranslation();
+  const [chartOptions, setChartOptions] = useState<ChartOptions>({
+    dataPresented: "unitsSold",
+    period: "week",
+    type: "bar",
+  });
 
   const presentedDataOptions = [
     { label: t("unitsSold"), value: "unitsSold" },
@@ -16,8 +28,30 @@ const ChartWidget = () => {
 
   const chartTypeOptions = [
     { label: t("bar"), value: "bar" },
-    { label: t("pie"), value: "pie" },
+    { label: t("line"), value: "line" },
   ];
+
+  const periodOptions = [
+    { label: t("today"), value: "today" },
+    { label: t("week"), value: "week" },
+    { label: t("year"), value: "year" },
+  ];
+
+  const handleSelectDataPresented = (value: DataPresented) => {
+    setChartOptions((options) => ({ ...options, dataPresented: value }));
+  };
+
+  const handleSelectChartType = (value: ChartType) => {
+    setChartOptions((options) => ({ ...options, type: value }));
+  };
+
+  const handleSelectPeriod = (value: PeriodPresented) => {
+    setChartOptions((options) => ({ ...options, period: value }));
+  };
+
+  const handleCheckPreviousPeriod = (value: boolean) => {
+    setChartOptions((options) => ({ ...options, previousPeriod: value }));
+  };
 
   return (
     <Card sx={{ maxWidth: "1000px" }}>
@@ -42,15 +76,17 @@ const ChartWidget = () => {
               minWidth={240}
               options={presentedDataOptions}
               defaultValue="unitsSold"
+              onSelect={handleSelectDataPresented}
             />
             <Select
               minWidth={240}
               options={chartTypeOptions}
               defaultValue="bar"
+              onSelect={handleSelectChartType}
             />
           </Box>
         </Box>
-        <Box sx={{ bgcolor: "red", height: "400px" }}></Box>
+        <Chart {...chartOptions} />
         <Box
           sx={{
             display: "flex",
@@ -60,16 +96,15 @@ const ChartWidget = () => {
             flexDirection: { xs: "column", md: "row" },
           }}
         >
-          <Box
-            sx={{
+          <ButtonToggleGroup
+            options={periodOptions}
+            defaultValue="week"
+            containerSx={{
               display: "flex",
               alignItems: "center",
             }}
-          >
-            <Button sx={{ mr: 2 }}>Dziś</Button>
-            <Button sx={{ mr: 2 }}>Obecny tydzień</Button>
-            <Button sx={{ mr: 2 }}>Obecny rok</Button>
-          </Box>
+            onSelect={handleSelectPeriod}
+          />
           <Box
             sx={{
               display: "flex",
@@ -78,8 +113,8 @@ const ChartWidget = () => {
               mt: { xs: 2, md: 0 },
             }}
           >
-            <Box>Pokaż dane z poprzedniego okresu</Box>
-            <Checkbox />
+            <Box>{t("showDataFromPreviousPeriod")}</Box>
+            <Checkbox onChange={handleCheckPreviousPeriod} />
           </Box>
         </Box>
       </Box>

@@ -1,4 +1,4 @@
-import { Box, FormControl, InputLabel, MenuItem } from "@mui/material";
+import { Box, FormControl, MenuItem } from "@mui/material";
 import MUISelect, { SelectChangeEvent } from "@mui/material/Select";
 import { useContext, useState } from "react";
 
@@ -8,7 +8,7 @@ import classes from "./inputs.module.css";
 type Props = {
   options: { label: string; value: string }[];
   defaultValue: string;
-  onSelect?: (value: string) => void;
+  onSelect?: (value: any) => void;
   minWidth?: number;
 };
 
@@ -46,6 +46,7 @@ const Select: React.FC<Props> = (props) => {
           {props.options.map((option) => {
             return (
               <MenuItem
+                key={option.value}
                 value={option.value}
                 classes={{ selected: classes.selected }}
               >
