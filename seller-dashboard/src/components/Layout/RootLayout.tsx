@@ -19,6 +19,7 @@ const RootLayout = () => {
             p: 3,
             backgroundColor: colors.primary100,
             color: colors.text,
+            position: "relative",
           }}
         >
           <Toolbar />
