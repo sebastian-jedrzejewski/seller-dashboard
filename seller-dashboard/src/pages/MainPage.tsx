@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/redux/store";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../store/redux/auth-slice";
+import RankingWidget from "../components/widgets/RankingWidget";
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const MainPage = () => {
       <h1>Welcome {userId}</h1>
       <button onClick={handleSignOut}>Sign out</button>
       <button onClick={handleOpinions}>Opinions</button>
+      <RankingWidget />
     </div>
   );
 };

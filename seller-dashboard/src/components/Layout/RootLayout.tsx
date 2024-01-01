@@ -10,7 +10,7 @@ const RootLayout = () => {
 
   return (
     <>
-      <Box sx={{ display: "flex", height: "100vh" }}>
+      <Box sx={{ display: "flex", minHeight: "100vh" }}>
         <Navbar />
         <Box
           component="main"
