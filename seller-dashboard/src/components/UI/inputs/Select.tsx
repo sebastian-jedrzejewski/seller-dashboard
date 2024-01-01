@@ -1,4 +1,4 @@
-import { Box, FormControl, InputLabel, MenuItem } from "@mui/material";
+import { Box, FormControl, MenuItem } from "@mui/material";
 import MUISelect, { SelectChangeEvent } from "@mui/material/Select";
 import { useContext, useState } from "react";
 
@@ -8,6 +8,8 @@ import classes from "./inputs.module.css";
 type Props = {
   options: { label: string; value: string }[];
   defaultValue: string;
+  onSelect?: (value: any) => void;
+  minWidth?: number;
 };
 
 const Select: React.FC<Props> = (props) => {
@@ -16,14 +18,17 @@ const Select: React.FC<Props> = (props) => {
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value as string);
+    if (props.onSelect) {
+      props.onSelect(event.target.value);
+    }
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: props.minWidth || 120 }}>
       <FormControl
         sx={{
           m: 1,
-          minWidth: 120,
+          minWidth: props.minWidth || 120,
           bgcolor: colors.selects,
           "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
             {
@@ -41,6 +46,7 @@ const Select: React.FC<Props> = (props) => {
           {props.options.map((option) => {
             return (
               <MenuItem
+                key={option.value}
                 value={option.value}
                 classes={{ selected: classes.selected }}
               >

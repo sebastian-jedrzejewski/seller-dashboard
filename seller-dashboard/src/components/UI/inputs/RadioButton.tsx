@@ -11,6 +11,7 @@ import { ThemeContext } from "../../../store/ThemeContext";
 type Props = {
   formLabel: string;
   options: { label: string; value: string }[];
+  onChange?: (value: any) => void;
 };
 
 const RadioButton: React.FC<Props> = (props) => {
@@ -19,6 +20,9 @@ const RadioButton: React.FC<Props> = (props) => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue((event.target as HTMLInputElement).value);
+    if (props.onChange) {
+      props.onChange(event.target.value);
+    }
   };
 
   return (
@@ -43,6 +47,7 @@ const RadioButton: React.FC<Props> = (props) => {
           {props.options.map((option) => {
             return (
               <FormControlLabel
+                key={option.value}
                 value={option.value}
                 control={
                   <Radio
