@@ -65,6 +65,10 @@ const translations = {
       shippingTime: "Shipping time",
       productsPrice: "Products price",
       showMore: "Show more",
+      noOpinions: "No opinions",
+      allOpinions: "All",
+      positiveOpinionsOnly: "Positive",
+      negativeOpinionsOnly: "Negative",
     },
   },
   [POLISH.code]: {
@@ -131,6 +135,10 @@ const translations = {
       shippingTime: "Czas dostawy",
       productsPrice: "Ceny produktów",
       showMore: "Pokaż więcej",
+      noOpinions: "Brak opinii",
+      allOpinions: "Wszystkie",
+      positiveOpinionsOnly: "Pozytywne",
+      negativeOpinionsOnly: "Negatywne",
     },
   },
 };

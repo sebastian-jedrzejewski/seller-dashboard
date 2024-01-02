@@ -6,6 +6,7 @@ import RankingWidget from "../components/widgets/RankingWidget";
 import ChartWidget from "../components/widgets/ChartWidget";
 import OrdersWidget from "../components/widgets/OrdersWidget";
 import SalesQualityWidget from "../components/widgets/SalesQualityWidget";
+import OpinionsWidget from "../components/widgets/OpinionsWidget";
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const MainPage = () => {
       <ChartWidget />
       <OrdersWidget />
       <SalesQualityWidget />
+      <OpinionsWidget />
     </div>
   );
 };
