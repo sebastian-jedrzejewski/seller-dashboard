@@ -4,7 +4,17 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/redux/store";
 import data from "../../data/data";
 import Card from "../UI/Card";
-import { Avatar, Box, Rating, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Rating,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import Select from "../UI/inputs/Select";
 import Opinion from "../../data/Opinion";
 import { useTranslation } from "react-i18next";
@@ -148,12 +158,21 @@ const OpinionsWidget = () => {
                           padding: "10px",
                         }}
                       >
-                        <Avatar src={opinion.imageSrc} sx={{ height: "3em", width: "3em" }} />
+                        <Avatar
+                          src={opinion.imageSrc}
+                          sx={{ height: "3em", width: "3em" }}
+                        />
                       </TableCell>
                       <TableCell
                         sx={{ textAlign: "center", color: colors.text }}
                       >
-                        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                          }}
+                        >
                           <Typography variant="h6">{opinion.name}</Typography>
                           <Rating
                             name="half-rating-read"
@@ -163,15 +182,27 @@ const OpinionsWidget = () => {
                             size="medium"
                             sx={{}}
                           />
-                          <Typography variant="h6" sx={{ fontWeight: 100 }}>{getDate(opinion.date)}</Typography>
+                          <Typography variant="h6" sx={{ fontWeight: 100 }}>
+                            {getDate(opinion.date)}
+                          </Typography>
                         </Box>
                       </TableCell>
                       <TableCell
                         sx={{ textAlign: "center", color: colors.text }}
                       >
-                        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                          <Typography variant="h6">{opinion.productName}</Typography>
-                          <Typography variant="h6" sx={{ fontWeight: 100 }}>{opinion.comment}</Typography>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Typography variant="h6">
+                            {opinion.productName}
+                          </Typography>
+                          <Typography variant="h6" sx={{ fontWeight: 100 }}>
+                            {opinion.comment}
+                          </Typography>
                         </Box>
                       </TableCell>
                     </TableRow>
@@ -188,9 +219,7 @@ const OpinionsWidget = () => {
             justifyContent: "center",
           }}
         >
-          <Button sx={{ marginTop: "20px" }}>
-            {t("showMore")}
-          </Button>
+          <Button sx={{ marginTop: "20px" }}>{t("showMore")}</Button>
         </Box>
       </Box>
     </Card>

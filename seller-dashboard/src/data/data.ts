@@ -180,7 +180,8 @@ const data: Data = {
           name: "John Smith",
           rating: 9,
           date: new Date("2021-09-20"),
-          comment: "Excellent product quality, met or exceeded my expectations.",
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
           productName: "Coffee Maker Deluxe Plus",
           isPositive: true,
         },
@@ -189,7 +190,8 @@ const data: Data = {
           name: "Esther Howard",
           rating: 7,
           date: new Date("2022-05-10"),
-          comment: "Fast and reliable shipping, received the product sooner than expected.",
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
           productName: "Portable Speaker Harmony 360",
           isPositive: true,
         },
@@ -198,7 +200,8 @@ const data: Data = {
           name: "Sofia Williams",
           rating: 8,
           date: new Date("2023-03-21"),
-          comment: "Impressed with the exceptional customer service, quick response to inquiries.",
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
           productName: "Camera Master 5000",
           isPositive: true,
         },
@@ -225,7 +228,8 @@ const data: Data = {
           name: "Alexia Stones",
           rating: 3,
           date: new Date("2021-01-20"),
-          comment: "Disappointed with the product quality, it didn't meet expectations.",
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
           productName: "Gaming Console X1",
           isPositive: false,
         },
@@ -234,7 +238,8 @@ const data: Data = {
           name: "Jacob Fisher",
           rating: 2,
           date: new Date("2023-02-17"),
-          comment: "Shipping took longer than anticipated, causing inconvenience.",
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
           productName: "Wireless Earbuds Ultra 2.0",
           isPositive: false,
         },
@@ -243,7 +248,8 @@ const data: Data = {
           name: "Anto Watson",
           rating: 4,
           date: new Date("2022-08-11"),
-          comment: "Poor customer service, difficult to get a timely response or resolution.",
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
@@ -252,7 +258,8 @@ const data: Data = {
           name: "Albert Flores",
           rating: 1,
           date: new Date("2023-05-13"),
-          comment: "The product's functionality is not as described or advertised.",
+          comment:
+            "The product's functionality is not as described or advertised.",
           productName: "Fitness Tracker Pro Max",
           isPositive: false,
         },
@@ -261,7 +268,8 @@ const data: Data = {
           name: "Dianne Russell",
           rating: 2,
           date: new Date("2021-04-14"),
-          comment: "Overpriced for the quality received, did not justify the cost.",
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
@@ -418,7 +426,8 @@ const data: Data = {
           name: "John Smith",
           rating: 9,
           date: new Date("2021-09-20"),
-          comment: "Excellent product quality, met or exceeded my expectations.",
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
           productName: "Coffee Maker Deluxe Plus",
           isPositive: true,
         },
@@ -427,7 +436,8 @@ const data: Data = {
           name: "Esther Howard",
           rating: 7,
           date: new Date("2022-05-10"),
-          comment: "Fast and reliable shipping, received the product sooner than expected.",
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
           productName: "Portable Speaker Harmony 360",
           isPositive: true,
         },
@@ -436,7 +446,8 @@ const data: Data = {
           name: "Sofia Williams",
           rating: 8,
           date: new Date("2023-03-21"),
-          comment: "Impressed with the exceptional customer service, quick response to inquiries.",
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
           productName: "Camera Master 5000",
           isPositive: true,
         },
@@ -463,7 +474,8 @@ const data: Data = {
           name: "Alexia Stones",
           rating: 3,
           date: new Date("2021-01-20"),
-          comment: "Disappointed with the product quality, it didn't meet expectations.",
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
           productName: "Gaming Console X1",
           isPositive: false,
         },
@@ -472,7 +484,8 @@ const data: Data = {
           name: "Jacob Fisher",
           rating: 2,
           date: new Date("2023-02-17"),
-          comment: "Shipping took longer than anticipated, causing inconvenience.",
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
           productName: "Wireless Earbuds Ultra 2.0",
           isPositive: false,
         },
@@ -481,7 +494,8 @@ const data: Data = {
           name: "Anto Watson",
           rating: 4,
           date: new Date("2022-08-11"),
-          comment: "Poor customer service, difficult to get a timely response or resolution.",
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
@@ -490,7 +504,8 @@ const data: Data = {
           name: "Albert Flores",
           rating: 1,
           date: new Date("2023-05-13"),
-          comment: "The product's functionality is not as described or advertised.",
+          comment:
+            "The product's functionality is not as described or advertised.",
           productName: "Fitness Tracker Pro Max",
           isPositive: false,
         },
@@ -499,7 +514,8 @@ const data: Data = {
           name: "Dianne Russell",
           rating: 2,
           date: new Date("2021-04-14"),
-          comment: "Overpriced for the quality received, did not justify the cost.",
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
@@ -805,7 +821,8 @@ const data: Data = {
           name: "John Smith",
           rating: 9,
           date: new Date("2021-09-20"),
-          comment: "Excellent product quality, met or exceeded my expectations.",
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
           productName: "Coffee Maker Deluxe Plus",
           isPositive: true,
         },
@@ -814,7 +831,8 @@ const data: Data = {
           name: "Esther Howard",
           rating: 7,
           date: new Date("2022-05-10"),
-          comment: "Fast and reliable shipping, received the product sooner than expected.",
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
           productName: "Portable Speaker Harmony 360",
           isPositive: true,
         },
@@ -823,7 +841,8 @@ const data: Data = {
           name: "Sofia Williams",
           rating: 8,
           date: new Date("2023-03-21"),
-          comment: "Impressed with the exceptional customer service, quick response to inquiries.",
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
           productName: "Camera Master 5000",
           isPositive: true,
         },
@@ -850,7 +869,8 @@ const data: Data = {
           name: "Alexia Stones",
           rating: 3,
           date: new Date("2021-01-20"),
-          comment: "Disappointed with the product quality, it didn't meet expectations.",
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
           productName: "Gaming Console X1",
           isPositive: false,
         },
@@ -859,7 +879,8 @@ const data: Data = {
           name: "Jacob Fisher",
           rating: 2,
           date: new Date("2023-02-17"),
-          comment: "Shipping took longer than anticipated, causing inconvenience.",
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
           productName: "Wireless Earbuds Ultra 2.0",
           isPositive: false,
         },
@@ -868,7 +889,8 @@ const data: Data = {
           name: "Anto Watson",
           rating: 4,
           date: new Date("2022-08-11"),
-          comment: "Poor customer service, difficult to get a timely response or resolution.",
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
@@ -877,7 +899,8 @@ const data: Data = {
           name: "Albert Flores",
           rating: 1,
           date: new Date("2023-05-13"),
-          comment: "The product's functionality is not as described or advertised.",
+          comment:
+            "The product's functionality is not as described or advertised.",
           productName: "Fitness Tracker Pro Max",
           isPositive: false,
         },
@@ -886,7 +909,8 @@ const data: Data = {
           name: "Dianne Russell",
           rating: 2,
           date: new Date("2021-04-14"),
-          comment: "Overpriced for the quality received, did not justify the cost.",
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
@@ -1043,7 +1067,8 @@ const data: Data = {
           name: "John Smith",
           rating: 9,
           date: new Date("2021-09-20"),
-          comment: "Excellent product quality, met or exceeded my expectations.",
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
           productName: "Coffee Maker Deluxe Plus",
           isPositive: true,
         },
@@ -1052,7 +1077,8 @@ const data: Data = {
           name: "Esther Howard",
           rating: 7,
           date: new Date("2022-05-10"),
-          comment: "Fast and reliable shipping, received the product sooner than expected.",
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
           productName: "Portable Speaker Harmony 360",
           isPositive: true,
         },
@@ -1061,7 +1087,8 @@ const data: Data = {
           name: "Sofia Williams",
           rating: 8,
           date: new Date("2023-03-21"),
-          comment: "Impressed with the exceptional customer service, quick response to inquiries.",
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
           productName: "Camera Master 5000",
           isPositive: true,
         },
@@ -1088,7 +1115,8 @@ const data: Data = {
           name: "Alexia Stones",
           rating: 3,
           date: new Date("2021-01-20"),
-          comment: "Disappointed with the product quality, it didn't meet expectations.",
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
           productName: "Gaming Console X1",
           isPositive: false,
         },
@@ -1097,7 +1125,8 @@ const data: Data = {
           name: "Jacob Fisher",
           rating: 2,
           date: new Date("2023-02-17"),
-          comment: "Shipping took longer than anticipated, causing inconvenience.",
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
           productName: "Wireless Earbuds Ultra 2.0",
           isPositive: false,
         },
@@ -1106,7 +1135,8 @@ const data: Data = {
           name: "Anto Watson",
           rating: 4,
           date: new Date("2022-08-11"),
-          comment: "Poor customer service, difficult to get a timely response or resolution.",
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
@@ -1115,7 +1145,8 @@ const data: Data = {
           name: "Albert Flores",
           rating: 1,
           date: new Date("2023-05-13"),
-          comment: "The product's functionality is not as described or advertised.",
+          comment:
+            "The product's functionality is not as described or advertised.",
           productName: "Fitness Tracker Pro Max",
           isPositive: false,
         },
@@ -1124,7 +1155,8 @@ const data: Data = {
           name: "Dianne Russell",
           rating: 2,
           date: new Date("2021-04-14"),
-          comment: "Overpriced for the quality received, did not justify the cost.",
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
           productName: "Smartphone Pro 12",
           isPositive: false,
         },
