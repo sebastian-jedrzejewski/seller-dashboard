@@ -10,12 +10,14 @@ import CoffeeMakerIcon from "@mui/icons-material/CoffeeMaker";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import Offer from "./Offer";
 import ChartInterface from "./Chart";
+import SalesQualityAspect from "./SalesQualityAspect";
 
 interface Stock {
   [key: string]: {
     offers: Offer[];
     charts: ChartInterface;
     orders: number[];
+    salesQualityAspects: SalesQualityAspect[];
   };
 }
 
@@ -148,6 +150,28 @@ const data: Data = {
         },
       },
       orders: [1000, 5, 0],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 3,
+        },
+        {
+          name: "shippingTime",
+          rating: 7,
+        },
+        {
+          name: "customerService",
+          rating: 4,
+        },
+        {
+          name: "customerExperience",
+          rating: 2,
+        },
+        {
+          name: "productsPrice",
+          rating: 10,
+        },
+      ],
     },
     "Sklep 2": {
       offers: [
@@ -272,6 +296,28 @@ const data: Data = {
         },
       },
       orders: [13, 0, 21],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 10,
+        },
+        {
+          name: "shippingTime",
+          rating: 10,
+        },
+        {
+          name: "customerService",
+          rating: 10,
+        },
+        {
+          name: "customerExperience",
+          rating: 10,
+        },
+        {
+          name: "productsPrice",
+          rating: 10,
+        },
+      ],
     },
     "Sklep 3": {
       offers: [
@@ -396,6 +442,28 @@ const data: Data = {
         },
       },
       orders: [0, 0, 0],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 4,
+        },
+        {
+          name: "shippingTime",
+          rating: 2,
+        },
+        {
+          name: "customerService",
+          rating: 3,
+        },
+        {
+          name: "customerExperience",
+          rating: 5,
+        },
+        {
+          name: "productsPrice",
+          rating: 1,
+        },
+      ],
     },
   },
   user2: {
@@ -522,6 +590,28 @@ const data: Data = {
         },
       },
       orders: [20, 2, 19],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 9,
+        },
+        {
+          name: "shippingTime",
+          rating: 2,
+        },
+        {
+          name: "customerService",
+          rating: 5,
+        },
+        {
+          name: "customerExperience",
+          rating: 5,
+        },
+        {
+          name: "productsPrice",
+          rating: 7,
+        },
+      ],
     },
     "Sklep 2": {
       offers: [
@@ -646,6 +736,28 @@ const data: Data = {
         },
       },
       orders: [17, 1, 15],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 5,
+        },
+        {
+          name: "shippingTime",
+          rating: 6,
+        },
+        {
+          name: "customerService",
+          rating: 4,
+        },
+        {
+          name: "customerExperience",
+          rating: 8,
+        },
+        {
+          name: "productsPrice",
+          rating: 5,
+        },
+      ],
     },
   },
 };

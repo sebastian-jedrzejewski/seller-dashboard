@@ -72,11 +72,10 @@ const OrdersWidget = () => {
           <Card
             onClick={
               orders[index] === 0
-                ? () => {
-                }
+                ? () => {}
                 : () => {
-                  navigate("/orders");
-                }
+                    navigate("/orders");
+                  }
             }
             sx={{
               maxWidth: "800px",
