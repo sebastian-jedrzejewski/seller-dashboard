@@ -9,6 +9,8 @@ export interface pallete {
   tableHeaders: string;
   selects: string;
   red: string;
+  redButton: string;
+  redButtonHover: string;
   yellow: string;
   text: string;
 }

@@ -15,6 +15,7 @@ interface Stock {
   [key: string]: {
     offers: Offer[];
     charts: ChartInterface;
+    orders: number[];
   };
 }
 
@@ -146,6 +147,7 @@ const data: Data = {
           },
         },
       },
+      orders: [1000, 5, 0],
     },
     "Sklep 2": {
       offers: [
@@ -269,6 +271,7 @@ const data: Data = {
           },
         },
       },
+      orders: [13, 0, 21],
     },
     "Sklep 3": {
       offers: [
@@ -392,6 +395,7 @@ const data: Data = {
           },
         },
       },
+      orders: [0, 0, 0],
     },
   },
   user2: {
@@ -517,6 +521,7 @@ const data: Data = {
           },
         },
       },
+      orders: [20, 2, 19],
     },
     "Sklep 2": {
       offers: [
@@ -640,6 +645,7 @@ const data: Data = {
           },
         },
       },
+      orders: [17, 1, 15],
     },
   },
 };

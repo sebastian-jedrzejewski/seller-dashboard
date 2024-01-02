@@ -5,6 +5,7 @@ import MainPage from "../pages/MainPage";
 import LoginPage from "../pages/LoginPage";
 import ProtectedRoute from "./ProtectedRoute";
 import OpinionsPage from "../pages/OpinionsPage";
+import OrdersPage from "../pages/OrdersPage";
 
 const router = createBrowserRouter([
   { path: "/login", element: <LoginPage /> },
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <MainPage /> },
       { path: "opinions", element: <OpinionsPage /> },
+      { path: "orders", element: <OrdersPage /> },
     ],
   },
 ]);

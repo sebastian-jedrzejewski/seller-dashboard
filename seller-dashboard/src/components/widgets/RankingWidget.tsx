@@ -93,16 +93,6 @@ const RankingWidget = () => {
     setSortOption((options) => ({ ...options, radio: value }));
   };
 
-  const sortSelectOptions = [
-    { label: t("bestSelling"), value: "bestSelling" },
-    { label: t("worstSelling"), value: "worstSelling" },
-  ];
-
-  const sortRadioOptions = [
-    { label: t("unitsSold"), value: "unitsSold" },
-    { label: t("turnover"), value: "turnover" },
-  ];
-
   return (
     <Card sx={{ maxWidth: "800px" }}>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
