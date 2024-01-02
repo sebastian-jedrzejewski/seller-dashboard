@@ -72,10 +72,11 @@ const OrdersWidget = () => {
           <Card
             onClick={
               orders[index] === 0
-                ? () => {}
+                ? () => {
+                }
                 : () => {
-                    navigate("/orders");
-                  }
+                  navigate("/orders");
+                }
             }
             sx={{
               maxWidth: "800px",
@@ -90,7 +91,7 @@ const OrdersWidget = () => {
                 alignItems: "center",
               }}
             >
-              <Typography variant="h3" color={colors.text}>
+              <Typography variant="h3" color={colors.text} sx={{ flex: 1 }}>
                 {orders[index]}
               </Typography>
               <Box
@@ -98,6 +99,7 @@ const OrdersWidget = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  flex: 5,
                 }}
               >
                 <Typography variant="h4" color={order.color}>
@@ -111,6 +113,7 @@ const OrdersWidget = () => {
                 sx={{
                   fontSize: "4rem",
                   opacity: orders[index] === 0 ? 0 : 100,
+                  flex: 1,
                 }}
               />
             </Box>
