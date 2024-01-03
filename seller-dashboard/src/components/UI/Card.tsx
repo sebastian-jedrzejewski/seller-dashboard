@@ -5,6 +5,7 @@ import { ThemeContext } from "../../store/ThemeContext";
 
 type Props = {
   sx?: SxProps<Theme>;
+  onClick?: () => void;
 };
 
 const Card: React.FC<PropsWithChildren<Props>> = (props) => {
@@ -18,6 +19,7 @@ const Card: React.FC<PropsWithChildren<Props>> = (props) => {
         padding: "1rem",
         ...props.sx,
       }}
+      onClick={props.onClick}
     >
       {props.children}
     </Box>

@@ -10,11 +10,16 @@ import CoffeeMakerIcon from "@mui/icons-material/CoffeeMaker";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import Offer from "./Offer";
 import ChartInterface from "./Chart";
+import SalesQualityAspect from "./SalesQualityAspect";
+import Opinion from "./Opinion";
 
 interface Stock {
   [key: string]: {
     offers: Offer[];
     charts: ChartInterface;
+    orders: number[];
+    salesQualityAspects: SalesQualityAspect[];
+    opinions: Opinion[];
   };
 }
 
@@ -146,6 +151,129 @@ const data: Data = {
           },
         },
       },
+      orders: [1000, 5, 0],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 3,
+        },
+        {
+          name: "shippingTime",
+          rating: 7,
+        },
+        {
+          name: "customerService",
+          rating: 4,
+        },
+        {
+          name: "customerExperience",
+          rating: 2,
+        },
+        {
+          name: "productsPrice",
+          rating: 10,
+        },
+      ],
+      opinions: [
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/50.jpg",
+          name: "John Smith",
+          rating: 9,
+          date: new Date("2021-09-20"),
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/49.jpg",
+          name: "Esther Howard",
+          rating: 7,
+          date: new Date("2022-05-10"),
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
+          productName: "Portable Speaker Harmony 360",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/31.jpg",
+          name: "Sofia Williams",
+          rating: 8,
+          date: new Date("2023-03-21"),
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
+          productName: "Camera Master 5000",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/31.jpg",
+          name: "Jack Wilson",
+          rating: 10,
+          date: new Date("2022-07-28"),
+          comment: "The product's features are user-friendly and intuitive.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/20.jpg",
+          name: "Leslie Alexa",
+          rating: 8,
+          date: new Date("2023-09-17"),
+          comment: "Great value for the price, affordable yet high-quality.",
+          productName: "4K Smart TV Supreme 55-inch",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/7.jpg",
+          name: "Alexia Stones",
+          rating: 3,
+          date: new Date("2021-01-20"),
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
+          productName: "Gaming Console X1",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/39.jpg",
+          name: "Jacob Fisher",
+          rating: 2,
+          date: new Date("2023-02-17"),
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
+          productName: "Wireless Earbuds Ultra 2.0",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/25.jpg",
+          name: "Anto Watson",
+          rating: 4,
+          date: new Date("2022-08-11"),
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/11.jpg",
+          name: "Albert Flores",
+          rating: 1,
+          date: new Date("2023-05-13"),
+          comment:
+            "The product's functionality is not as described or advertised.",
+          productName: "Fitness Tracker Pro Max",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/27.jpg",
+          name: "Dianne Russell",
+          rating: 2,
+          date: new Date("2021-04-14"),
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+      ],
     },
     "Sklep 2": {
       offers: [
@@ -269,6 +397,129 @@ const data: Data = {
           },
         },
       },
+      orders: [13, 0, 21],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 10,
+        },
+        {
+          name: "shippingTime",
+          rating: 10,
+        },
+        {
+          name: "customerService",
+          rating: 10,
+        },
+        {
+          name: "customerExperience",
+          rating: 10,
+        },
+        {
+          name: "productsPrice",
+          rating: 10,
+        },
+      ],
+      opinions: [
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/50.jpg",
+          name: "John Smith",
+          rating: 9,
+          date: new Date("2021-09-20"),
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/49.jpg",
+          name: "Esther Howard",
+          rating: 7,
+          date: new Date("2022-05-10"),
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
+          productName: "Portable Speaker Harmony 360",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/31.jpg",
+          name: "Sofia Williams",
+          rating: 8,
+          date: new Date("2023-03-21"),
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
+          productName: "Camera Master 5000",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/31.jpg",
+          name: "Jack Wilson",
+          rating: 10,
+          date: new Date("2022-07-28"),
+          comment: "The product's features are user-friendly and intuitive.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/20.jpg",
+          name: "Leslie Alexa",
+          rating: 8,
+          date: new Date("2023-09-17"),
+          comment: "Great value for the price, affordable yet high-quality.",
+          productName: "4K Smart TV Supreme 55-inch",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/7.jpg",
+          name: "Alexia Stones",
+          rating: 3,
+          date: new Date("2021-01-20"),
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
+          productName: "Gaming Console X1",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/39.jpg",
+          name: "Jacob Fisher",
+          rating: 2,
+          date: new Date("2023-02-17"),
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
+          productName: "Wireless Earbuds Ultra 2.0",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/25.jpg",
+          name: "Anto Watson",
+          rating: 4,
+          date: new Date("2022-08-11"),
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/11.jpg",
+          name: "Albert Flores",
+          rating: 1,
+          date: new Date("2023-05-13"),
+          comment:
+            "The product's functionality is not as described or advertised.",
+          productName: "Fitness Tracker Pro Max",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/27.jpg",
+          name: "Dianne Russell",
+          rating: 2,
+          date: new Date("2021-04-14"),
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+      ],
     },
     "Sklep 3": {
       offers: [
@@ -392,6 +643,30 @@ const data: Data = {
           },
         },
       },
+      orders: [0, 0, 0],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 4,
+        },
+        {
+          name: "shippingTime",
+          rating: 2,
+        },
+        {
+          name: "customerService",
+          rating: 3,
+        },
+        {
+          name: "customerExperience",
+          rating: 5,
+        },
+        {
+          name: "productsPrice",
+          rating: 1,
+        },
+      ],
+      opinions: [],
     },
   },
   user2: {
@@ -517,6 +792,129 @@ const data: Data = {
           },
         },
       },
+      orders: [20, 2, 19],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 9,
+        },
+        {
+          name: "shippingTime",
+          rating: 2,
+        },
+        {
+          name: "customerService",
+          rating: 5,
+        },
+        {
+          name: "customerExperience",
+          rating: 5,
+        },
+        {
+          name: "productsPrice",
+          rating: 7,
+        },
+      ],
+      opinions: [
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/50.jpg",
+          name: "John Smith",
+          rating: 9,
+          date: new Date("2021-09-20"),
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/49.jpg",
+          name: "Esther Howard",
+          rating: 7,
+          date: new Date("2022-05-10"),
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
+          productName: "Portable Speaker Harmony 360",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/31.jpg",
+          name: "Sofia Williams",
+          rating: 8,
+          date: new Date("2023-03-21"),
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
+          productName: "Camera Master 5000",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/31.jpg",
+          name: "Jack Wilson",
+          rating: 10,
+          date: new Date("2022-07-28"),
+          comment: "The product's features are user-friendly and intuitive.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/20.jpg",
+          name: "Leslie Alexa",
+          rating: 8,
+          date: new Date("2023-09-17"),
+          comment: "Great value for the price, affordable yet high-quality.",
+          productName: "4K Smart TV Supreme 55-inch",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/7.jpg",
+          name: "Alexia Stones",
+          rating: 3,
+          date: new Date("2021-01-20"),
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
+          productName: "Gaming Console X1",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/39.jpg",
+          name: "Jacob Fisher",
+          rating: 2,
+          date: new Date("2023-02-17"),
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
+          productName: "Wireless Earbuds Ultra 2.0",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/25.jpg",
+          name: "Anto Watson",
+          rating: 4,
+          date: new Date("2022-08-11"),
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/11.jpg",
+          name: "Albert Flores",
+          rating: 1,
+          date: new Date("2023-05-13"),
+          comment:
+            "The product's functionality is not as described or advertised.",
+          productName: "Fitness Tracker Pro Max",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/27.jpg",
+          name: "Dianne Russell",
+          rating: 2,
+          date: new Date("2021-04-14"),
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+      ],
     },
     "Sklep 2": {
       offers: [
@@ -640,6 +1038,129 @@ const data: Data = {
           },
         },
       },
+      orders: [17, 1, 15],
+      salesQualityAspects: [
+        {
+          name: "productsQuality",
+          rating: 5,
+        },
+        {
+          name: "shippingTime",
+          rating: 6,
+        },
+        {
+          name: "customerService",
+          rating: 4,
+        },
+        {
+          name: "customerExperience",
+          rating: 8,
+        },
+        {
+          name: "productsPrice",
+          rating: 5,
+        },
+      ],
+      opinions: [
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/50.jpg",
+          name: "John Smith",
+          rating: 9,
+          date: new Date("2021-09-20"),
+          comment:
+            "Excellent product quality, met or exceeded my expectations.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/49.jpg",
+          name: "Esther Howard",
+          rating: 7,
+          date: new Date("2022-05-10"),
+          comment:
+            "Fast and reliable shipping, received the product sooner than expected.",
+          productName: "Portable Speaker Harmony 360",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/31.jpg",
+          name: "Sofia Williams",
+          rating: 8,
+          date: new Date("2023-03-21"),
+          comment:
+            "Impressed with the exceptional customer service, quick response to inquiries.",
+          productName: "Camera Master 5000",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/31.jpg",
+          name: "Jack Wilson",
+          rating: 10,
+          date: new Date("2022-07-28"),
+          comment: "The product's features are user-friendly and intuitive.",
+          productName: "Coffee Maker Deluxe Plus",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/20.jpg",
+          name: "Leslie Alexa",
+          rating: 8,
+          date: new Date("2023-09-17"),
+          comment: "Great value for the price, affordable yet high-quality.",
+          productName: "4K Smart TV Supreme 55-inch",
+          isPositive: true,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/7.jpg",
+          name: "Alexia Stones",
+          rating: 3,
+          date: new Date("2021-01-20"),
+          comment:
+            "Disappointed with the product quality, it didn't meet expectations.",
+          productName: "Gaming Console X1",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/39.jpg",
+          name: "Jacob Fisher",
+          rating: 2,
+          date: new Date("2023-02-17"),
+          comment:
+            "Shipping took longer than anticipated, causing inconvenience.",
+          productName: "Wireless Earbuds Ultra 2.0",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/25.jpg",
+          name: "Anto Watson",
+          rating: 4,
+          date: new Date("2022-08-11"),
+          comment:
+            "Poor customer service, difficult to get a timely response or resolution.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/men/11.jpg",
+          name: "Albert Flores",
+          rating: 1,
+          date: new Date("2023-05-13"),
+          comment:
+            "The product's functionality is not as described or advertised.",
+          productName: "Fitness Tracker Pro Max",
+          isPositive: false,
+        },
+        {
+          imageSrc: "https://randomuser.me/api/portraits/women/27.jpg",
+          name: "Dianne Russell",
+          rating: 2,
+          date: new Date("2021-04-14"),
+          comment:
+            "Overpriced for the quality received, did not justify the cost.",
+          productName: "Smartphone Pro 12",
+          isPositive: false,
+        },
+      ],
     },
   },
 };

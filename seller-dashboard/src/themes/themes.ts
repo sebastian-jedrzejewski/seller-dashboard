@@ -11,6 +11,8 @@ export const darkTheme: pallete = {
   tableHeaders: "#959595",
   selects: "#6C6C6C",
   red: "#DD0F73",
+  redButton: "#DD0F73",
+  redButtonHover: "#850040",
   yellow: "#FFF06A",
   text: "#FFFFFF",
 };
@@ -26,6 +28,8 @@ export const lightTheme: pallete = {
   tableHeaders: "#000000",
   selects: "#FFFFFF",
   red: "#850040",
+  redButton: "#DD0F73",
+  redButtonHover: "#850040",
   yellow: "#9C8D00",
   text: "#000000",
 };
