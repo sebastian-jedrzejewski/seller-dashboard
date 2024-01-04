@@ -54,7 +54,7 @@ const ChartWidget = () => {
   };
 
   return (
-    <Card sx={{ maxWidth: "1000px" }}>
+    <Card>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Box
           sx={{

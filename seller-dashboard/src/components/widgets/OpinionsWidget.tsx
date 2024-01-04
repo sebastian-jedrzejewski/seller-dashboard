@@ -58,7 +58,7 @@ const OpinionsWidget = () => {
 
   if (opinions.length === 0) {
     return (
-      <Card sx={{ maxWidth: "800px" }}>
+      <Card>
         <Typography
           variant="h3"
           color={colors.text}
@@ -116,7 +116,7 @@ const OpinionsWidget = () => {
   };
 
   return (
-    <Card sx={{ maxWidth: "950px" }}>
+    <Card>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Box
           sx={{

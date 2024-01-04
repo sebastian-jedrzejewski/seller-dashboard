@@ -276,78 +276,7 @@ const data: Data = {
       ],
     },
     "Sklep 2": {
-      offers: [
-        {
-          image: MonitorIcon,
-          name: "Monitor",
-          unitsSold: 1,
-          turnover: 2230,
-          viewsAmount: 13,
-        },
-        {
-          image: LaptopIcon,
-          name: "Laptop Prestige Z2",
-          unitsSold: 20,
-          turnover: 28000,
-          viewsAmount: 50,
-        },
-        {
-          image: SmartphoneIcon,
-          name: "Smartphone Advanced 15",
-          unitsSold: 14,
-          turnover: 20000,
-          viewsAmount: 60,
-        },
-        {
-          image: VideogameAssetIcon,
-          name: "Gaming Console Super X2",
-          unitsSold: 12,
-          turnover: 24000,
-          viewsAmount: 70,
-        },
-        {
-          image: EarbudsIcon,
-          name: "Wireless Earbuds Prodigy 3.0",
-          unitsSold: 22,
-          turnover: 17000,
-          viewsAmount: 85,
-        },
-        {
-          image: MonitorHeartIcon,
-          name: "Fitness Tracker Supreme Ultra",
-          unitsSold: 10,
-          turnover: 10000,
-          viewsAmount: 55,
-        },
-        {
-          image: ConnectedTvIcon,
-          name: "4K Smart TV Deluxe 65-inch",
-          unitsSold: 18,
-          turnover: 38000,
-          viewsAmount: 75,
-        },
-        {
-          image: CameraAltIcon,
-          name: "Camera Expert 6000",
-          unitsSold: 8,
-          turnover: 15000,
-          viewsAmount: 35,
-        },
-        {
-          image: VolumeUpIcon,
-          name: "Portable Speaker Symphony 450",
-          unitsSold: 25,
-          turnover: 12000,
-          viewsAmount: 55,
-        },
-        {
-          image: CoffeeMakerIcon,
-          name: "Coffee Maker Elegance Gold",
-          unitsSold: 12,
-          turnover: 10500,
-          viewsAmount: 40,
-        },
-      ],
+      offers: [],
       charts: {
         unitsSold: {
           today: {

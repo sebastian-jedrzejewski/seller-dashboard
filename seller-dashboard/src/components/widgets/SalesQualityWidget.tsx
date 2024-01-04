@@ -37,7 +37,7 @@ const SalesQualityWidget = () => {
   return (
     <>
       {totalOpinions !== 0 ? (
-        <Card sx={{ maxWidth: "800px" }}>
+        <Card>
           <Typography
             variant="h3"
             color={colors.text}
@@ -68,7 +68,7 @@ const SalesQualityWidget = () => {
           </Box>
         </Card>
       ) : (
-        <Card sx={{ maxWidth: "800px" }}>
+        <Card>
           <Typography
             variant="h3"
             color={colors.text}

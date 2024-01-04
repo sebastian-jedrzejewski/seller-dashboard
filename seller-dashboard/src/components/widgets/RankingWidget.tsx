@@ -61,7 +61,7 @@ const RankingWidget = () => {
         return a.viewsAmount - b.viewsAmount;
       });
     }
-    offers = offers.slice(0, 6);
+    offers = offers.slice(0, 5);
   }
 
   const tableHeadersOptions = [
@@ -93,8 +93,34 @@ const RankingWidget = () => {
     setSortOption((options) => ({ ...options, radio: value }));
   };
 
+  if (offers.length === 0) {
+    return (
+      <Card>
+        <Typography
+          variant="h3"
+          color={colors.text}
+          sx={{ marginBottom: "20px" }}
+        >
+          {t("offersRanking")}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <Typography variant="h4" color={colors.text}>
+            {t("noOffers")}
+          </Typography>
+        </Box>
+      </Card>
+    );
+  }
+
   return (
-    <Card sx={{ maxWidth: "800px" }}>
+    <Card>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Box
           sx={{
