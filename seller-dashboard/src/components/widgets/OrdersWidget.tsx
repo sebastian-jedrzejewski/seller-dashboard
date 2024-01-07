@@ -34,7 +34,7 @@ const OrdersWidget = () => {
   return (
     <>
       {totalOrders === 0 ? (
-        <Card sx={{ maxWidth: "800px" }}>
+        <Card>
           <Typography
             variant="h3"
             color={colors.text}
@@ -78,9 +78,10 @@ const OrdersWidget = () => {
                   }
             }
             sx={{
-              maxWidth: "800px",
+              height: "auto",
+              cursor: orders[index] === 0 ? "auto" : "pointer",
               ":hover": { boxShadow: orders[index] === 0 ? 0 : 20 },
-              mb: "20px",
+              mb: index !== ordersProps.length - 1 ? "20px" : 0,
             }}
           >
             <Box

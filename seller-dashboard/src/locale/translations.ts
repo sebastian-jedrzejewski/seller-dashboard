@@ -69,6 +69,7 @@ const translations = {
       allOpinions: "All",
       positiveOpinionsOnly: "Positive",
       negativeOpinionsOnly: "Negative",
+      noOffers: "No offers",
     },
   },
   [POLISH.code]: {
@@ -123,7 +124,7 @@ const translations = {
       ordersForOrdersWidget: "Zamówień",
       noOrders: "Brak zamówień",
       promotionOffer: "Skorzystaj z usługi promowania, aby dotrzeć do klientów",
-      showDetails: "Pokaż sczegóły oferty",
+      showDetails: "Pokaż szczegóły oferty",
       noSaleMessage: "Aktualnie nic nie sprzedajesz",
       listItemForSale: "Wystaw przedmiot na sprzedaż",
       salesRating: "Ocena jakości",
@@ -139,6 +140,7 @@ const translations = {
       allOpinions: "Wszystkie",
       positiveOpinionsOnly: "Pozytywne",
       negativeOpinionsOnly: "Negatywne",
+      noOffers: "Brak ofert",
     },
   },
 };
