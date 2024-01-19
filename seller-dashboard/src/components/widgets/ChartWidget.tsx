@@ -101,7 +101,6 @@ const ChartWidget = () => {
             defaultValue="week"
             containerSx={{
               display: "flex",
-              alignItems: "center",
             }}
             onSelect={handleSelectPeriod}
           />

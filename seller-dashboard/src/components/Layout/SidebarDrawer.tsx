@@ -19,7 +19,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { ThemeContext } from "../../store/ThemeContext";
-import { logout } from "../../store/redux/auth-slice";
+import { logoutUser } from "../../store/redux/actions";
 
 const drawerWidth = 240;
 
@@ -35,7 +35,8 @@ const SidebarDrawer: React.FC<Props> = (props) => {
   const { t } = useTranslation();
 
   const handleSignOut = () => {
-    dispatch(logout());
+    /* @ts-ignore */
+    dispatch(logoutUser());
     navigate("/login");
   };
 

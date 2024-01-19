@@ -141,9 +141,10 @@ const SalesQualityWidget = () => {
             >
               {t("theWorstAspects")}
             </Typography>
-            {theWorstAspects.map((aspect) => {
+            {theWorstAspects.map((aspect, index) => {
               return (
                 <Box
+                  key={index}
                   sx={{
                     display: "flex",
                     justifyContent: "center",

@@ -70,6 +70,7 @@ const OrdersWidget = () => {
       ) : (
         ordersProps.map((order, index) => (
           <Card
+            key={index}
             onClick={
               orders[index] === 0
                 ? () => {}

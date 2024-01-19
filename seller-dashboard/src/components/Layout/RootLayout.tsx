@@ -1,9 +1,9 @@
 import { Box, Toolbar } from "@mui/material";
 import { useContext } from "react";
+import { Outlet } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import { ThemeContext } from "../../store/ThemeContext";
-import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
   const { colors } = useContext(ThemeContext);

@@ -1,23 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
-import { login } from "../store/redux/auth-slice";
 import data from "../data/data";
+import { autoLogin, loginUser } from "../store/redux/actions";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [userId, setUserId] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    /* @ts-ignore */
+    dispatch(autoLogin());
+  }, []);
 
   const handleLogin = () => {
     if (Object.keys(data).includes(userId)) {
-      dispatch(login(userId));
+      /* @ts-ignore */
+      dispatch(loginUser(userId));
+      setError("");
       navigate("/");
     } else {
-      alert("Invalid user id");
+      setError("Invalid user id");
     }
   };
+
+  if (localStorage.getItem("userId")) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div
@@ -41,6 +53,9 @@ const LoginPage = () => {
         onChange={(e) => setUserId(e.target.value)}
       />
       <button onClick={handleLogin}>Sign in</button>
+      {error && (
+        <span style={{ color: "red", marginTop: "10px" }}>{error}</span>
+      )}
     </div>
   );
 };
