@@ -42,7 +42,7 @@ const Navbar = () => {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { md: "none" } }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: colors.accent }} />
           </IconButton>
 
           <SelectStock />
