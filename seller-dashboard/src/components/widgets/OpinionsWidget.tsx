@@ -19,6 +19,7 @@ import Select from "../UI/inputs/Select";
 import Opinion from "../../data/Opinion";
 import { useTranslation } from "react-i18next";
 import Button from "../UI/inputs/Button";
+import { useNavigate } from "react-router-dom";
 
 const sortSelectValues = {
   all: "all",
@@ -27,6 +28,7 @@ const sortSelectValues = {
 };
 
 const OpinionsWidget = () => {
+  const navigate = useNavigate();
   const { colors } = useContext(ThemeContext);
   const { t } = useTranslation();
   const userId = useSelector((state: RootState) => state.auth.userId);
@@ -219,7 +221,12 @@ const OpinionsWidget = () => {
             justifyContent: "center",
           }}
         >
-          <Button sx={{ marginTop: "20px" }}>{t("showMore")}</Button>
+          <Button
+            onClick={() => navigate("/opinions")}
+            sx={{ marginTop: "20px" }}
+          >
+            {t("showMore")}
+          </Button>
         </Box>
       </Box>
     </Card>

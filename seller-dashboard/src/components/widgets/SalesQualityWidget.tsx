@@ -8,8 +8,10 @@ import { Box, Rating, Typography } from "@mui/material";
 import Button from "../UI/inputs/Button";
 import data from "../../data/data";
 import SalesQualityAspect from "../../data/SalesQualityAspect";
+import { useNavigate } from "react-router-dom";
 
 const SalesQualityWidget = () => {
+  const navigate = useNavigate();
   const { colors } = useContext(ThemeContext);
   const { t } = useTranslation();
   const userId = useSelector((state: RootState) => state.auth.userId);
@@ -162,7 +164,12 @@ const SalesQualityWidget = () => {
                 </Box>
               );
             })}
-            <Button sx={{ marginTop: "20px" }}>{t("showMore")}</Button>
+            <Button
+              onClick={() => navigate("/salesQuality")}
+              sx={{ marginTop: "20px" }}
+            >
+              {t("showMore")}
+            </Button>
           </Box>
         </Card>
       )}
