@@ -26,9 +26,9 @@ const OrdersWidget = () => {
   const totalOrders = orders.reduce((a, b) => a + b, 0);
 
   const ordersProps = [
-    { type: t("unpaid"), color: colors.red },
-    { type: t("unsent"), color: colors.yellow },
-    { type: t("returned"), color: colors.secondary200 },
+    { type: "unpaid", color: colors.red },
+    { type: "unsent", color: colors.yellow },
+    { type: "returned", color: colors.secondary200 },
   ];
 
   return (
@@ -75,7 +75,7 @@ const OrdersWidget = () => {
               orders[index] === 0
                 ? () => {}
                 : () => {
-                    navigate("/orders");
+                    navigate("/orders/" + order.type);
                   }
             }
             sx={{
@@ -104,7 +104,7 @@ const OrdersWidget = () => {
                 }}
               >
                 <Typography variant="h4" color={order.color}>
-                  {order.type}
+                  {t(order.type)}
                 </Typography>
                 <Typography variant="h4" color={colors.text}>
                   {t("ordersForOrdersWidget")}

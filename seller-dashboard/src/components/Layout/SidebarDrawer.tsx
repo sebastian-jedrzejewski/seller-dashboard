@@ -16,7 +16,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { ThemeContext } from "../../store/ThemeContext";
 import { logoutUser } from "../../store/redux/actions";
@@ -33,6 +33,8 @@ const SidebarDrawer: React.FC<Props> = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const location = useLocation();
+  const pathName = "/" + location.pathname.split("/")[1];
 
   const handleSignOut = () => {
     /* @ts-ignore */
@@ -41,10 +43,10 @@ const SidebarDrawer: React.FC<Props> = (props) => {
   };
 
   const menuItems = [
-    { icon: <HomeIcon />, text: t("home"), isActive: true },
-    { icon: <BookmarkBorderIcon />, text: t("orders") },
-    { icon: <StarsIcon />, text: t("salesQuality") },
-    { icon: <CommentIcon />, text: t("opinions") },
+    { icon: <HomeIcon />, text: t("home"), isActive: true, path: "/" },
+    { icon: <BookmarkBorderIcon />, text: t("orders"), path: "/orders" },
+    { icon: <StarsIcon />, text: t("salesQuality"), path: "/salesQuality" },
+    { icon: <CommentIcon />, text: t("opinions"), path: "/opinions" },
   ];
 
   const drawer = (
@@ -62,18 +64,21 @@ const SidebarDrawer: React.FC<Props> = (props) => {
         <List sx={{ color: colors.text }}>
           {menuItems.map((item, index) => (
             <ListItem key={index} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() => navigate(item.path)}>
                 <ListItemIcon>
                   {React.cloneElement(item.icon, {
                     sx: {
-                      color: item.isActive
-                        ? colors.secondary200
-                        : colors.accent,
+                      color:
+                        pathName === item.path
+                          ? colors.secondary200
+                          : colors.accent,
                     },
                   })}
                 </ListItemIcon>
                 <ListItemText
-                  sx={{ color: item.isActive ? colors.secondary200 : "" }}
+                  sx={{
+                    color: pathName === item.path ? colors.secondary200 : "",
+                  }}
                 >
                   {item.text}
                 </ListItemText>

@@ -6,6 +6,7 @@ import LoginPage from "../pages/LoginPage";
 import ProtectedRoute from "./ProtectedRoute";
 import OpinionsPage from "../pages/OpinionsPage";
 import OrdersPage from "../pages/OrdersPage";
+import SalesQualityPage from "../pages/SalesQualityPage";
 
 const router = createBrowserRouter([
   { path: "/login", element: <LoginPage /> },
@@ -19,7 +20,9 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <MainPage /> },
       { path: "opinions", element: <OpinionsPage /> },
+      { path: "orders/:type", element: <OrdersPage /> },
       { path: "orders", element: <OrdersPage /> },
+      { path: "salesQuality", element: <SalesQualityPage /> },
     ],
   },
 ]);

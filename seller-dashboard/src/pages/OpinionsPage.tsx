@@ -1,13 +1,13 @@
-import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Box } from "@mui/material";
 
 const OpinionsPage = () => {
-  const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
-    <div>
-      <h1>OpinionsPage</h1>
-      <button onClick={() => navigate("/")}>Back to main</button>
-    </div>
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <h1>{t("opinions")}</h1>
+    </Box>
   );
 };
 
