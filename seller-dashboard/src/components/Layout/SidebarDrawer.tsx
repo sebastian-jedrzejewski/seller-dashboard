@@ -1,4 +1,13 @@
-import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar } from "@mui/material";
+import {
+  Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Toolbar,
+} from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import StarsIcon from "@mui/icons-material/Stars";
@@ -59,14 +68,17 @@ const SidebarDrawer: React.FC<Props> = (props) => {
                 <ListItemIcon>
                   {React.cloneElement(item.icon, {
                     sx: {
-                      color: pathName === item.path
-                        ? colors.secondary200
-                        : colors.accent,
+                      color:
+                        pathName === item.path
+                          ? colors.secondary200
+                          : colors.accent,
                     },
                   })}
                 </ListItemIcon>
                 <ListItemText
-                  sx={{ color: pathName === item.path ? colors.secondary200 : "" }}
+                  sx={{
+                    color: pathName === item.path ? colors.secondary200 : "",
+                  }}
                 >
                   {item.text}
                 </ListItemText>

@@ -16,9 +16,14 @@ const OrdersPage = () => {
   ];
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <Box
+      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <h1>{t("orders")}</h1>
-      <Typography variant="h4" color={ordersProps.find(order => order.type === type)?.color}>
+      <Typography
+        variant="h4"
+        color={ordersProps.find((order) => order.type === type)?.color}
+      >
         {type ? t(type + "Order") : t("allOrders")}
       </Typography>
     </Box>

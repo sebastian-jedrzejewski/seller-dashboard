@@ -73,11 +73,10 @@ const OrdersWidget = () => {
             key={index}
             onClick={
               orders[index] === 0
-                ? () => {
-                }
+                ? () => {}
                 : () => {
-                  navigate("/orders/" + order.type);
-                }
+                    navigate("/orders/" + order.type);
+                  }
             }
             sx={{
               height: "auto",
