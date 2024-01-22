@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../store/ThemeContext";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/redux/store";
@@ -12,7 +11,6 @@ import SalesQualityAspect from "../../data/SalesQualityAspect";
 
 const SalesQualityWidget = () => {
   const { colors } = useContext(ThemeContext);
-  const navigate = useNavigate();
   const { t } = useTranslation();
   const userId = useSelector((state: RootState) => state.auth.userId);
   const chosenStockName = useSelector(
@@ -27,16 +25,17 @@ const SalesQualityWidget = () => {
     return <></>;
   }
   const theWorstAspects = salesQualityAspects.slice(0, 3);
-  const rating = Math.round(
-    salesQualityAspects.reduce((a, b) => a + b.rating, 0) /
-      salesQualityAspects.length,
-  );
-
-  const totalOpinions = 0;
+  let rating = 0;
+  if (salesQualityAspects.length !== 0) {
+    rating = Math.round(
+      salesQualityAspects.reduce((a, b) => a + b.rating, 0) /
+        salesQualityAspects.length,
+    );
+  }
 
   return (
     <>
-      {totalOpinions !== 0 ? (
+      {salesQualityAspects.length === 0 ? (
         <Card>
           <Typography
             variant="h3"

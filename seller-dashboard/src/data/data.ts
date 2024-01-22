@@ -276,7 +276,78 @@ const data: Data = {
       ],
     },
     "Sklep 2": {
-      offers: [],
+      offers: [
+        {
+          image: MonitorIcon,
+          name: "Monitor",
+          unitsSold: 5,
+          turnover: 10230,
+          viewsAmount: 38,
+        },
+        {
+          image: LaptopIcon,
+          name: "Laptop Elite X1",
+          unitsSold: 15,
+          turnover: 25000,
+          viewsAmount: 45,
+        },
+        {
+          image: SmartphoneIcon,
+          name: "Smartphone Pro 12",
+          unitsSold: 6,
+          turnover: 12000,
+          viewsAmount: 30,
+        },
+        {
+          image: VideogameAssetIcon,
+          name: "Gaming Console X1",
+          unitsSold: 10,
+          turnover: 22000,
+          viewsAmount: 65,
+        },
+        {
+          image: EarbudsIcon,
+          name: "Wireless Earbuds Ultra 2.0",
+          unitsSold: 18,
+          turnover: 15000,
+          viewsAmount: 78,
+        },
+        {
+          image: MonitorHeartIcon,
+          name: "Fitness Tracker Pro Max",
+          unitsSold: 7,
+          turnover: 8000,
+          viewsAmount: 42,
+        },
+        {
+          image: ConnectedTvIcon,
+          name: "4K Smart TV Supreme 55-inch",
+          unitsSold: 14,
+          turnover: 35000,
+          viewsAmount: 60,
+        },
+        {
+          image: CameraAltIcon,
+          name: "Camera Master 5000",
+          unitsSold: 6,
+          turnover: 12000,
+          viewsAmount: 30,
+        },
+        {
+          image: VolumeUpIcon,
+          name: "Portable Speaker Harmony 360",
+          unitsSold: 20,
+          turnover: 10000,
+          viewsAmount: 48,
+        },
+        {
+          image: CoffeeMakerIcon,
+          name: "Coffee Maker Deluxe Plus",
+          unitsSold: 9,
+          turnover: 9500,
+          viewsAmount: 33,
+        },
+      ],
       charts: {
         unitsSold: {
           today: {
@@ -454,28 +525,7 @@ const data: Data = {
       offers: [],
       charts: {},
       orders: [0, 0, 0],
-      salesQualityAspects: [
-        {
-          name: "productsQuality",
-          rating: 4,
-        },
-        {
-          name: "shippingTime",
-          rating: 2,
-        },
-        {
-          name: "customerService",
-          rating: 3,
-        },
-        {
-          name: "customerExperience",
-          rating: 5,
-        },
-        {
-          name: "productsPrice",
-          rating: 1,
-        },
-      ],
+      salesQualityAspects: [],
       opinions: [],
     },
   },
