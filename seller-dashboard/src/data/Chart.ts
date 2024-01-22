@@ -4,12 +4,12 @@ export interface Period {
 }
 
 interface ChartInterface {
-  unitsSold: {
+  unitsSold?: {
     today: Period;
     week: Period;
     year: Period;
   };
-  turnover: {
+  turnover?: {
     today: Period;
     week: Period;
     year: Period;

@@ -117,8 +117,10 @@ const Chart: React.FC<ChartOptions> = (props) => {
   let previous = [] as number[];
   if (userId && chosenStockName) {
     const userCharts = appData[userId][chosenStockName].charts;
-    current = userCharts[dataPresented][period].current;
-    previous = userCharts[dataPresented][period].previous;
+    current =
+      userCharts?.[dataPresented]?.[period]?.current || ([] as number[]);
+    previous =
+      userCharts?.[dataPresented]?.[period]?.previous || ([] as number[]);
   }
   data.datasets.push({
     label: t("current"),

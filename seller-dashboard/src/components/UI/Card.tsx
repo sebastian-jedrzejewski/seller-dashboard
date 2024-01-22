@@ -16,6 +16,7 @@ const Card: React.FC<PropsWithChildren<Props>> = (props) => {
       sx={{
         bgcolor: colors.primary200,
         borderRadius: 10,
+        border: `1px ${colors.accent} solid`,
         padding: "1rem",
         height: "100%",
         ...props.sx,
