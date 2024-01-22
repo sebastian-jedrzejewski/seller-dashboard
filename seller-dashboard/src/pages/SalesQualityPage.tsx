@@ -1,13 +1,13 @@
-import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Box } from "@mui/material";
 
 const SalesQualityPage = () => {
-  const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
-    <div>
-      <h1>SalesQualityPage</h1>
-      <button onClick={() => navigate("/")}>Back to main</button>
-    </div>
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <h1>{t("salesQuality")}</h1>
+    </Box>
   );
 };
 

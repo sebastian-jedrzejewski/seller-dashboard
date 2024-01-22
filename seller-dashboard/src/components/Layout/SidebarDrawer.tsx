@@ -25,6 +25,7 @@ const SidebarDrawer: React.FC<Props> = (props) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const location = useLocation();
+  const pathName = "/" + location.pathname.split("/")[1];
 
   const handleSignOut = () => {
     /* @ts-ignore */
@@ -58,14 +59,14 @@ const SidebarDrawer: React.FC<Props> = (props) => {
                 <ListItemIcon>
                   {React.cloneElement(item.icon, {
                     sx: {
-                      color: location.pathname === item.path
+                      color: pathName === item.path
                         ? colors.secondary200
                         : colors.accent,
                     },
                   })}
                 </ListItemIcon>
                 <ListItemText
-                  sx={{ color: location.pathname === item.path ? colors.secondary200 : "" }}
+                  sx={{ color: pathName === item.path ? colors.secondary200 : "" }}
                 >
                   {item.text}
                 </ListItemText>
