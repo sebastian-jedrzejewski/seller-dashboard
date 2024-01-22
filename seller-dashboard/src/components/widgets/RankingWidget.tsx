@@ -128,9 +128,18 @@ const RankingWidget = () => {
             justifyContent: "space-around",
             alignItems: "center",
             flexWrap: "wrap",
+            gap: "1rem",
           }}
         >
-          <Typography variant="h3">{t("offersRanking")}</Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              flex: 1,
+            }}
+          >
+            <Typography variant="h3">{t("offersRanking")}</Typography>
+          </Box>
           <Select
             options={sortSelectOptions}
             defaultValue={sortSelectValues.bestSelling}
@@ -192,17 +201,26 @@ const RankingWidget = () => {
                         {createElement(offer.image, { fontSize: "large" })}
                       </TableCell>
                       <TableCell
-                        sx={{ textAlign: "center", color: colors.text }}
+                        sx={{
+                          textAlign: "center",
+                          color: colors.text,
+                        }}
                       >
                         {offer.name}
                       </TableCell>
                       <TableCell
-                        sx={{ textAlign: "center", color: colors.text }}
+                        sx={{
+                          textAlign: "center",
+                          color: colors.text,
+                        }}
                       >
                         {offer.unitsSold}
                       </TableCell>
                       <TableCell
-                        sx={{ textAlign: "center", color: colors.text }}
+                        sx={{
+                          textAlign: "center",
+                          color: colors.text,
+                        }}
                       >
                         {sortOption.select === sortSelectValues.bestSelling
                           ? `${offer.turnover} zł`
